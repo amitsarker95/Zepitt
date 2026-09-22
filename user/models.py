@@ -23,6 +23,8 @@ class UserManager(BaseUserManager):
 
 
 class CustomUser(AbstractBaseUser):
+
+    
     email = models.EmailField(unique=True, max_length=255)
     city = models.CharField(max_length=100)
     created_at = models.DateTimeField(auto_now_add=True)
